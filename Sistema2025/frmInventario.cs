@@ -47,11 +47,14 @@ namespace Sistema2025
             this.txtPrecioInv.Text = "";
             this.cboxTipoInv.SelectedIndex = -1;
         }
+<<<<<<< HEAD
 
         private void txtPrecioInv_TextChanged(object sender, EventArgs e)
         {
 
         }
+=======
+>>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
     }
 }
 

@@ -286,5 +286,6 @@
         private Label lblSku;
         private TextBox textBox1;
         private TextBox txtPrecioInv;
+        private Panel panelHost;
     }
 }

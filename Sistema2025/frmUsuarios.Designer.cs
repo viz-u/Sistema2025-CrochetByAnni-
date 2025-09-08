@@ -44,8 +44,11 @@
             lblUsuarios = new Label();
             panelHost = new Panel();
 <<<<<<< HEAD
+<<<<<<< HEAD
             textBox1 = new TextBox();
             label4 = new Label();
+=======
+>>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
 =======
 >>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
             toolStrip1.SuspendLayout();
@@ -116,8 +119,11 @@
             // plUsuarios
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             plUsuarios.Controls.Add(textBox1);
             plUsuarios.Controls.Add(label4);
+=======
+>>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
 =======
 >>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
             plUsuarios.Controls.Add(cboxTipoUsuario);
@@ -138,7 +144,11 @@
             cboxTipoUsuario.FormattingEnabled = true;
             cboxTipoUsuario.Items.AddRange(new object[] { "General", "Administrador" });
 <<<<<<< HEAD
+<<<<<<< HEAD
             cboxTipoUsuario.Location = new Point(33, 400);
+=======
+            cboxTipoUsuario.Location = new Point(288, 362);
+>>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
 =======
             cboxTipoUsuario.Location = new Point(288, 362);
 >>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
@@ -150,7 +160,11 @@
             // 
             label3.AutoSize = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
             label3.Location = new Point(33, 360);
+=======
+            label3.Location = new Point(288, 322);
+>>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
 =======
             label3.Location = new Point(288, 322);
 >>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
@@ -163,7 +177,11 @@
             // 
             txtPasswordForm.BorderStyle = BorderStyle.FixedSingle;
 <<<<<<< HEAD
+<<<<<<< HEAD
             txtPasswordForm.Location = new Point(33, 307);
+=======
+            txtPasswordForm.Location = new Point(288, 269);
+>>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
 =======
             txtPasswordForm.Location = new Point(288, 269);
 >>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
@@ -175,7 +193,11 @@
             // 
             txtUsuarioForm.BorderStyle = BorderStyle.FixedSingle;
 <<<<<<< HEAD
+<<<<<<< HEAD
             txtUsuarioForm.Location = new Point(32, 138);
+=======
+            txtUsuarioForm.Location = new Point(288, 187);
+>>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
 =======
             txtUsuarioForm.Location = new Point(288, 187);
 >>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
@@ -187,7 +209,11 @@
             // 
             label2.AutoSize = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
             label2.Location = new Point(32, 269);
+=======
+            label2.Location = new Point(287, 231);
+>>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
 =======
             label2.Location = new Point(287, 231);
 >>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
@@ -200,17 +226,23 @@
             // 
             label1.AutoSize = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
             label1.Location = new Point(31, 101);
             label1.Name = "label1";
             label1.Size = new Size(82, 25);
             label1.TabIndex = 8;
             label1.Text = "Nombre:";
 =======
+=======
+>>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
             label1.Location = new Point(287, 150);
             label1.Name = "label1";
             label1.Size = new Size(76, 25);
             label1.TabIndex = 8;
             label1.Text = "Usuario:";
+<<<<<<< HEAD
+>>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
+=======
 >>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
             // 
             // lblUsuarios
@@ -234,6 +266,7 @@
             panelHost.TabIndex = 2;
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             // textBox1
             // 
             textBox1.BorderStyle = BorderStyle.FixedSingle;
@@ -251,6 +284,8 @@
             label4.TabIndex = 14;
             label4.Text = "Usuario:";
             // 
+=======
+>>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
 =======
 >>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
             // frmUsuarios
@@ -292,8 +327,11 @@
         private Label lblUsuarios;
         private Panel panelHost;
 <<<<<<< HEAD
+<<<<<<< HEAD
         private TextBox textBox1;
         private Label label4;
+=======
+>>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
 =======
 >>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
     }
