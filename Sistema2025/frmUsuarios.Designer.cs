@@ -43,8 +43,11 @@
             label1 = new Label();
             lblUsuarios = new Label();
             panelHost = new Panel();
+<<<<<<< HEAD
             textBox1 = new TextBox();
             label4 = new Label();
+=======
+>>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
             toolStrip1.SuspendLayout();
             plUsuarios.SuspendLayout();
             panelHost.SuspendLayout();
@@ -112,8 +115,11 @@
             // 
             // plUsuarios
             // 
+<<<<<<< HEAD
             plUsuarios.Controls.Add(textBox1);
             plUsuarios.Controls.Add(label4);
+=======
+>>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
             plUsuarios.Controls.Add(cboxTipoUsuario);
             plUsuarios.Controls.Add(label3);
             plUsuarios.Controls.Add(txtPasswordForm);
@@ -131,7 +137,11 @@
             // 
             cboxTipoUsuario.FormattingEnabled = true;
             cboxTipoUsuario.Items.AddRange(new object[] { "General", "Administrador" });
+<<<<<<< HEAD
             cboxTipoUsuario.Location = new Point(33, 400);
+=======
+            cboxTipoUsuario.Location = new Point(288, 362);
+>>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
             cboxTipoUsuario.Name = "cboxTipoUsuario";
             cboxTipoUsuario.Size = new Size(261, 33);
             cboxTipoUsuario.TabIndex = 13;
@@ -139,7 +149,11 @@
             // label3
             // 
             label3.AutoSize = true;
+<<<<<<< HEAD
             label3.Location = new Point(33, 360);
+=======
+            label3.Location = new Point(288, 322);
+>>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
             label3.Name = "label3";
             label3.Size = new Size(141, 25);
             label3.TabIndex = 12;
@@ -148,7 +162,11 @@
             // txtPasswordForm
             // 
             txtPasswordForm.BorderStyle = BorderStyle.FixedSingle;
+<<<<<<< HEAD
             txtPasswordForm.Location = new Point(33, 307);
+=======
+            txtPasswordForm.Location = new Point(288, 269);
+>>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
             txtPasswordForm.Name = "txtPasswordForm";
             txtPasswordForm.Size = new Size(261, 31);
             txtPasswordForm.TabIndex = 11;
@@ -156,7 +174,11 @@
             // txtUsuarioForm
             // 
             txtUsuarioForm.BorderStyle = BorderStyle.FixedSingle;
+<<<<<<< HEAD
             txtUsuarioForm.Location = new Point(32, 138);
+=======
+            txtUsuarioForm.Location = new Point(288, 187);
+>>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
             txtUsuarioForm.Name = "txtUsuarioForm";
             txtUsuarioForm.Size = new Size(261, 31);
             txtUsuarioForm.TabIndex = 10;
@@ -164,7 +186,11 @@
             // label2
             // 
             label2.AutoSize = true;
+<<<<<<< HEAD
             label2.Location = new Point(32, 269);
+=======
+            label2.Location = new Point(287, 231);
+>>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
             label2.Name = "label2";
             label2.Size = new Size(105, 25);
             label2.TabIndex = 9;
@@ -173,11 +199,19 @@
             // label1
             // 
             label1.AutoSize = true;
+<<<<<<< HEAD
             label1.Location = new Point(31, 101);
             label1.Name = "label1";
             label1.Size = new Size(82, 25);
             label1.TabIndex = 8;
             label1.Text = "Nombre:";
+=======
+            label1.Location = new Point(287, 150);
+            label1.Name = "label1";
+            label1.Size = new Size(76, 25);
+            label1.TabIndex = 8;
+            label1.Text = "Usuario:";
+>>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
             // 
             // lblUsuarios
             // 
@@ -199,6 +233,7 @@
             panelHost.Size = new Size(1014, 559);
             panelHost.TabIndex = 2;
             // 
+<<<<<<< HEAD
             // textBox1
             // 
             textBox1.BorderStyle = BorderStyle.FixedSingle;
@@ -216,6 +251,8 @@
             label4.TabIndex = 14;
             label4.Text = "Usuario:";
             // 
+=======
+>>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
             // frmUsuarios
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -254,7 +291,10 @@
         private Label label1;
         private Label lblUsuarios;
         private Panel panelHost;
+<<<<<<< HEAD
         private TextBox textBox1;
         private Label label4;
+=======
+>>>>>>> a36bbb27dac21c8c446f48959672bc9624d5affe
     }
 }

@@ -35,22 +35,22 @@
             toolStripButton4 = new ToolStripButton();
             toolStripButton5 = new ToolStripButton();
             plInventario = new Panel();
+            numericUpDown1 = new NumericUpDown();
+            lblStock = new Label();
+            lblSku = new Label();
+            textBox1 = new TextBox();
             label2 = new Label();
+            txtPrecioInv = new TextBox();
             label1 = new Label();
             cboxTipoInv = new ComboBox();
             label3 = new Label();
             txtNombreInv = new TextBox();
             lblUsuarios = new Label();
             panelHost = new Panel();
-            lblSku = new Label();
-            textBox1 = new TextBox();
-            txtPrecioInv = new TextBox();
-            lblStock = new Label();
-            numericUpDown1 = new NumericUpDown();
             toolStrip1.SuspendLayout();
             plInventario.SuspendLayout();
-            panelHost.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            panelHost.SuspendLayout();
             SuspendLayout();
             // 
             // toolStrip1
@@ -133,6 +133,41 @@
             plInventario.TabIndex = 3;
             plInventario.Paint += panel1_Paint;
             // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(51, 452);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(144, 31);
+            numericUpDown1.TabIndex = 21;
+            // 
+            // lblStock
+            // 
+            lblStock.AutoSize = true;
+            lblStock.BackColor = Color.Transparent;
+            lblStock.Location = new Point(51, 424);
+            lblStock.Name = "lblStock";
+            lblStock.Size = new Size(83, 25);
+            lblStock.TabIndex = 20;
+            lblStock.Text = "Cantidad";
+            // 
+            // lblSku
+            // 
+            lblSku.AutoSize = true;
+            lblSku.BackColor = Color.Transparent;
+            lblSku.Location = new Point(45, 349);
+            lblSku.Name = "lblSku";
+            lblSku.Size = new Size(54, 25);
+            lblSku.TabIndex = 18;
+            lblSku.Text = "Clave";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(45, 377);
+            textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "Escriba aqui...";
+            textBox1.Size = new Size(150, 31);
+            textBox1.TabIndex = 19;
+            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -142,6 +177,15 @@
             label2.Size = new Size(60, 25);
             label2.TabIndex = 16;
             label2.Text = "Precio";
+            // 
+            // txtPrecioInv
+            // 
+            txtPrecioInv.Location = new Point(45, 298);
+            txtPrecioInv.Name = "txtPrecioInv";
+            txtPrecioInv.PlaceholderText = "Escriba aqui...";
+            txtPrecioInv.Size = new Size(150, 31);
+            txtPrecioInv.TabIndex = 17;
+            txtPrecioInv.TextChanged += txtPrecioInv_TextChanged;
             // 
             // label1
             // 
@@ -200,49 +244,6 @@
             panelHost.Size = new Size(1162, 651);
             panelHost.TabIndex = 4;
             // 
-            // lblSku
-            // 
-            lblSku.AutoSize = true;
-            lblSku.BackColor = Color.Transparent;
-            lblSku.Location = new Point(45, 349);
-            lblSku.Name = "lblSku";
-            lblSku.Size = new Size(54, 25);
-            lblSku.TabIndex = 18;
-            lblSku.Text = "Clave";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(45, 377);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Escriba aqui...";
-            textBox1.Size = new Size(150, 31);
-            textBox1.TabIndex = 19;
-            // 
-            // txtPrecioInv
-            // 
-            txtPrecioInv.Location = new Point(45, 298);
-            txtPrecioInv.Name = "txtPrecioInv";
-            txtPrecioInv.PlaceholderText = "Escriba aqui...";
-            txtPrecioInv.Size = new Size(150, 31);
-            txtPrecioInv.TabIndex = 17;
-            // 
-            // lblStock
-            // 
-            lblStock.AutoSize = true;
-            lblStock.BackColor = Color.Transparent;
-            lblStock.Location = new Point(51, 424);
-            lblStock.Name = "lblStock";
-            lblStock.Size = new Size(83, 25);
-            lblStock.TabIndex = 20;
-            lblStock.Text = "Cantidad";
-            // 
-            // numericUpDown1
-            // 
-            numericUpDown1.Location = new Point(51, 452);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(144, 31);
-            numericUpDown1.TabIndex = 21;
-            // 
             // frmInventario
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -258,8 +259,8 @@
             toolStrip1.PerformLayout();
             plInventario.ResumeLayout(false);
             plInventario.PerformLayout();
-            panelHost.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            panelHost.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
