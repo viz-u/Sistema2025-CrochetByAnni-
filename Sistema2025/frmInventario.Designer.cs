@@ -129,7 +129,7 @@
             plInventario.Controls.Add(lblUsuarios);
             plInventario.Location = new Point(37, 30);
             plInventario.Name = "plInventario";
-            plInventario.Size = new Size(412, 523);
+            plInventario.Size = new Size(419, 523);
             plInventario.TabIndex = 3;
             plInventario.Paint += panel1_Paint;
             // 
