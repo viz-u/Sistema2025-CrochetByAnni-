@@ -19,6 +19,7 @@ namespace Sistema2025
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+            //hola
         }
 
         private void frmInventario_Load(object sender, EventArgs e)
