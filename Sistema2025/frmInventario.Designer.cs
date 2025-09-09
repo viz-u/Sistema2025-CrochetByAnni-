@@ -37,8 +37,6 @@
             plInventario = new Panel();
             numericUpDown1 = new NumericUpDown();
             lblStock = new Label();
-            lblSku = new Label();
-            textBox1 = new TextBox();
             label2 = new Label();
             txtPrecioInv = new TextBox();
             label1 = new Label();
@@ -47,6 +45,8 @@
             txtNombreInv = new TextBox();
             lblUsuarios = new Label();
             panelHost = new Panel();
+            lblSku = new Label();
+            textBox1 = new TextBox();
             toolStrip1.SuspendLayout();
             plInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
@@ -116,10 +116,10 @@
             // 
             // plInventario
             // 
-            plInventario.Controls.Add(numericUpDown1);
-            plInventario.Controls.Add(lblStock);
             plInventario.Controls.Add(lblSku);
+            plInventario.Controls.Add(numericUpDown1);
             plInventario.Controls.Add(textBox1);
+            plInventario.Controls.Add(lblStock);
             plInventario.Controls.Add(label2);
             plInventario.Controls.Add(txtPrecioInv);
             plInventario.Controls.Add(label1);
@@ -149,24 +149,6 @@
             lblStock.Size = new Size(83, 25);
             lblStock.TabIndex = 20;
             lblStock.Text = "Cantidad";
-            // 
-            // lblSku
-            // 
-            lblSku.AutoSize = true;
-            lblSku.BackColor = Color.Transparent;
-            lblSku.Location = new Point(45, 349);
-            lblSku.Name = "lblSku";
-            lblSku.Size = new Size(54, 25);
-            lblSku.TabIndex = 18;
-            lblSku.Text = "Clave";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(45, 377);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Escriba aqui...";
-            textBox1.Size = new Size(150, 31);
-            textBox1.TabIndex = 19;
             // 
             // label2
             // 
@@ -244,6 +226,24 @@
             panelHost.Size = new Size(1162, 651);
             panelHost.TabIndex = 4;
             // 
+            // lblSku
+            // 
+            lblSku.AutoSize = true;
+            lblSku.BackColor = Color.Transparent;
+            lblSku.Location = new Point(45, 349);
+            lblSku.Name = "lblSku";
+            lblSku.Size = new Size(54, 25);
+            lblSku.TabIndex = 20;
+            lblSku.Text = "Clave";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(45, 377);
+            textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "Escriba aqui...";
+            textBox1.Size = new Size(150, 31);
+            textBox1.TabIndex = 21;
+            // 
             // frmInventario
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -283,8 +283,8 @@
         private Panel panelHost;
         private NumericUpDown numericUpDown1;
         private Label lblStock;
+        private TextBox txtPrecioInv;
         private Label lblSku;
         private TextBox textBox1;
-        private TextBox txtPrecioInv;
     }
 }
