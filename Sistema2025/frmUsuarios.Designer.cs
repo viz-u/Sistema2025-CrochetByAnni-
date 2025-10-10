@@ -35,6 +35,8 @@
             toolStripButton4 = new ToolStripButton();
             toolStripButton5 = new ToolStripButton();
             plUsuarios = new Panel();
+            textBox1 = new TextBox();
+            label4 = new Label();
             cboxTipoUsuario = new ComboBox();
             label3 = new Label();
             txtPasswordForm = new TextBox();
@@ -43,13 +45,11 @@
             label1 = new Label();
             lblUsuarios = new Label();
             panelHost = new Panel();
-
-            textBox1 = new TextBox();
-            label4 = new Label();
-
+            dataGridView1 = new DataGridView();
             toolStrip1.SuspendLayout();
             plUsuarios.SuspendLayout();
             panelHost.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // toolStrip1
@@ -61,7 +61,7 @@
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.RenderMode = ToolStripRenderMode.Professional;
-            toolStrip1.Size = new Size(94, 559);
+            toolStrip1.Size = new Size(94, 636);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -114,10 +114,9 @@
             // 
             // plUsuarios
             // 
-
+            plUsuarios.Controls.Add(dataGridView1);
             plUsuarios.Controls.Add(textBox1);
             plUsuarios.Controls.Add(label4);
-
             plUsuarios.Controls.Add(cboxTipoUsuario);
             plUsuarios.Controls.Add(label3);
             plUsuarios.Controls.Add(txtPasswordForm);
@@ -127,21 +126,32 @@
             plUsuarios.Controls.Add(lblUsuarios);
             plUsuarios.Location = new Point(74, 41);
             plUsuarios.Name = "plUsuarios";
-            plUsuarios.Size = new Size(774, 506);
+            plUsuarios.Size = new Size(922, 583);
             plUsuarios.TabIndex = 1;
             plUsuarios.Paint += panel1_Paint;
+            // 
+            // textBox1
+            // 
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
+            textBox1.Location = new Point(29, 146);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(261, 31);
+            textBox1.TabIndex = 15;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(28, 109);
+            label4.Name = "label4";
+            label4.Size = new Size(82, 25);
+            label4.TabIndex = 14;
+            label4.Text = "Nombre:";
             // 
             // cboxTipoUsuario
             // 
             cboxTipoUsuario.FormattingEnabled = true;
             cboxTipoUsuario.Items.AddRange(new object[] { "General", "Administrador" });
-
-            cboxTipoUsuario.Location = new Point(33, 400);
-
-            cboxTipoUsuario.Location = new Point(288, 362);
-
-            cboxTipoUsuario.Location = new Point(288, 362);
-
+            cboxTipoUsuario.Location = new Point(30, 403);
             cboxTipoUsuario.Name = "cboxTipoUsuario";
             cboxTipoUsuario.Size = new Size(261, 33);
             cboxTipoUsuario.TabIndex = 13;
@@ -149,13 +159,7 @@
             // label3
             // 
             label3.AutoSize = true;
-
-            label3.Location = new Point(33, 360);
-
-            label3.Location = new Point(288, 322);
-
-            label3.Location = new Point(288, 322);
-
+            label3.Location = new Point(30, 363);
             label3.Name = "label3";
             label3.Size = new Size(141, 25);
             label3.TabIndex = 12;
@@ -164,13 +168,7 @@
             // txtPasswordForm
             // 
             txtPasswordForm.BorderStyle = BorderStyle.FixedSingle;
-
-            txtPasswordForm.Location = new Point(33, 307);
-
-            txtPasswordForm.Location = new Point(288, 269);
-
-            txtPasswordForm.Location = new Point(288, 269);
-
+            txtPasswordForm.Location = new Point(30, 310);
             txtPasswordForm.Name = "txtPasswordForm";
             txtPasswordForm.Size = new Size(261, 31);
             txtPasswordForm.TabIndex = 11;
@@ -178,12 +176,7 @@
             // txtUsuarioForm
             // 
             txtUsuarioForm.BorderStyle = BorderStyle.FixedSingle;
-            txtUsuarioForm.Location = new Point(32, 138);
-
-            txtUsuarioForm.Location = new Point(288, 187);
-
-            txtUsuarioForm.Location = new Point(288, 187);
-
+            txtUsuarioForm.Location = new Point(30, 228);
             txtUsuarioForm.Name = "txtUsuarioForm";
             txtUsuarioForm.Size = new Size(261, 31);
             txtUsuarioForm.TabIndex = 10;
@@ -191,13 +184,7 @@
             // label2
             // 
             label2.AutoSize = true;
-
-            label2.Location = new Point(32, 269);
-
-            label2.Location = new Point(287, 231);
-
-            label2.Location = new Point(287, 231);
-
+            label2.Location = new Point(29, 272);
             label2.Name = "label2";
             label2.Size = new Size(105, 25);
             label2.TabIndex = 9;
@@ -206,19 +193,12 @@
             // label1
             // 
             label1.AutoSize = true;
-
-            label1.Location = new Point(31, 101);
-            label1.Name = "label1";
-            label1.Size = new Size(82, 25);
-            label1.TabIndex = 8;
-            label1.Text = "Nombre:";
-
-            label1.Location = new Point(287, 150);
+            label1.Location = new Point(29, 191);
             label1.Name = "label1";
             label1.Size = new Size(76, 25);
             label1.TabIndex = 8;
             label1.Text = "Usuario:";
-
+            label1.Click += label1_Click;
             // 
             // lblUsuarios
             // 
@@ -237,33 +217,23 @@
             panelHost.Dock = DockStyle.Fill;
             panelHost.Location = new Point(94, 0);
             panelHost.Name = "panelHost";
-            panelHost.Size = new Size(1014, 559);
+            panelHost.Size = new Size(1126, 636);
             panelHost.TabIndex = 2;
             // 
-
-            // textBox1
+            // dataGridView1
             // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(32, 221);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(261, 31);
-            textBox1.TabIndex = 15;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(470, 109);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.Size = new Size(360, 327);
+            dataGridView1.TabIndex = 16;
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(31, 184);
-            label4.Name = "label4";
-            label4.Size = new Size(76, 25);
-            label4.TabIndex = 14;
-            label4.Text = "Usuario:";
-            // 
-
             // frmUsuarios
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1108, 559);
+            ClientSize = new Size(1220, 636);
             Controls.Add(panelHost);
             Controls.Add(toolStrip1);
             Name = "frmUsuarios";
@@ -276,6 +246,7 @@
             plUsuarios.ResumeLayout(false);
             plUsuarios.PerformLayout();
             panelHost.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -300,6 +271,6 @@
 
         private TextBox textBox1;
         private Label label4;
-
+        private DataGridView dataGridView1;
     }
 }

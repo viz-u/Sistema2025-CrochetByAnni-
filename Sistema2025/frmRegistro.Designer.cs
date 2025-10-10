@@ -49,12 +49,15 @@
             label10 = new Label();
             numCantidad = new NumericUpDown();
             label9 = new Label();
-            label1 = new Label();
             label2 = new Label();
-            cboxProductoRegistro = new ComboBox();
             cboxMateriaRegistro = new ComboBox();
             lblUsuarios = new Label();
             panelHost = new Panel();
+            dataGridView1 = new DataGridView();
+            dataGridView2 = new DataGridView();
+            dataGridView3 = new DataGridView();
+            dataGridView4 = new DataGridView();
+            PRODUCTOS = new DataGridViewTextBoxColumn();
             toolStrip1.SuspendLayout();
             plRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
@@ -63,6 +66,10 @@
             splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numCantidad).BeginInit();
             panelHost.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView4).BeginInit();
             SuspendLayout();
             // 
             // toolStrip1
@@ -74,7 +81,7 @@
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.RenderMode = ToolStripRenderMode.Professional;
-            toolStrip1.Size = new Size(94, 658);
+            toolStrip1.Size = new Size(94, 690);
             toolStrip1.TabIndex = 3;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -132,13 +139,13 @@
             plRegistro.Controls.Add(lblUsuarios);
             plRegistro.Location = new Point(65, 42);
             plRegistro.Name = "plRegistro";
-            plRegistro.Size = new Size(1179, 603);
+            plRegistro.Size = new Size(1208, 636);
             plRegistro.TabIndex = 4;
             plRegistro.Paint += plRegistro_Paint;
             // 
             // splitContainer1
             // 
-            splitContainer1.Location = new Point(341, 152);
+            splitContainer1.Location = new Point(30, 103);
             splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -153,6 +160,10 @@
             // 
             // splitContainer1.Panel2
             // 
+            splitContainer1.Panel2.Controls.Add(dataGridView4);
+            splitContainer1.Panel2.Controls.Add(dataGridView3);
+            splitContainer1.Panel2.Controls.Add(dataGridView2);
+            splitContainer1.Panel2.Controls.Add(dataGridView1);
             splitContainer1.Panel2.Controls.Add(btnRegistrar);
             splitContainer1.Panel2.Controls.Add(label11);
             splitContainer1.Panel2.Controls.Add(cboxAccionRegistro);
@@ -160,12 +171,10 @@
             splitContainer1.Panel2.Controls.Add(label10);
             splitContainer1.Panel2.Controls.Add(numCantidad);
             splitContainer1.Panel2.Controls.Add(label9);
-            splitContainer1.Panel2.Controls.Add(label1);
             splitContainer1.Panel2.Controls.Add(label2);
-            splitContainer1.Panel2.Controls.Add(cboxProductoRegistro);
             splitContainer1.Panel2.Controls.Add(cboxMateriaRegistro);
-            splitContainer1.Size = new Size(751, 387);
-            splitContainer1.SplitterDistance = 248;
+            splitContainer1.Size = new Size(1159, 517);
+            splitContainer1.SplitterDistance = 382;
             splitContainer1.TabIndex = 14;
             // 
             // label8
@@ -225,17 +234,17 @@
             // 
             // btnRegistrar
             // 
-            btnRegistrar.Location = new Point(275, 285);
+            btnRegistrar.Location = new Point(214, 37);
             btnRegistrar.Name = "btnRegistrar";
-            btnRegistrar.Size = new Size(180, 34);
+            btnRegistrar.Size = new Size(113, 34);
             btnRegistrar.TabIndex = 20;
-            btnRegistrar.Text = "REGISTRAR";
+            btnRegistrar.Text = "BUSCAR";
             btnRegistrar.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(34, 245);
+            label11.Location = new Point(12, 11);
             label11.Name = "label11";
             label11.Size = new Size(65, 25);
             label11.TabIndex = 19;
@@ -244,8 +253,8 @@
             // cboxAccionRegistro
             // 
             cboxAccionRegistro.FormattingEnabled = true;
-            cboxAccionRegistro.Items.AddRange(new object[] { "Ingreso", "Egreso" });
-            cboxAccionRegistro.Location = new Point(34, 286);
+            cboxAccionRegistro.Items.AddRange(new object[] { "Venta", "Movimiento" });
+            cboxAccionRegistro.Location = new Point(12, 39);
             cboxAccionRegistro.Name = "cboxAccionRegistro";
             cboxAccionRegistro.Size = new Size(182, 33);
             cboxAccionRegistro.TabIndex = 18;
@@ -253,15 +262,16 @@
             // 
             // dateFechaRegistro
             // 
-            dateFechaRegistro.Location = new Point(275, 170);
+            dateFechaRegistro.Location = new Point(200, 371);
             dateFechaRegistro.Name = "dateFechaRegistro";
             dateFechaRegistro.Size = new Size(180, 31);
             dateFechaRegistro.TabIndex = 17;
+           
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(275, 130);
+            label10.Location = new Point(200, 332);
             label10.Name = "label10";
             label10.Size = new Size(57, 25);
             label10.TabIndex = 16;
@@ -269,7 +279,7 @@
             // 
             // numCantidad
             // 
-            numCantidad.Location = new Point(275, 70);
+            numCantidad.Location = new Point(12, 371);
             numCantidad.Name = "numCantidad";
             numCantidad.Size = new Size(180, 31);
             numCantidad.TabIndex = 15;
@@ -277,47 +287,30 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(275, 31);
+            label9.Location = new Point(12, 332);
             label9.Name = "label9";
             label9.Size = new Size(83, 25);
             label9.TabIndex = 14;
             label9.Text = "Cantidad";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(34, 31);
-            label1.Name = "label1";
-            label1.Size = new Size(85, 25);
-            label1.TabIndex = 12;
-            label1.Text = "Producto";
-            // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(34, 130);
+            label2.Location = new Point(12, 405);
             label2.Name = "label2";
             label2.Size = new Size(121, 25);
             label2.TabIndex = 13;
             label2.Text = "Materia Prima";
             // 
-            // cboxProductoRegistro
-            // 
-            cboxProductoRegistro.FormattingEnabled = true;
-            cboxProductoRegistro.Items.AddRange(new object[] { "Muñeco", "Llavero", "Flores", "Manta" });
-            cboxProductoRegistro.Location = new Point(34, 72);
-            cboxProductoRegistro.Name = "cboxProductoRegistro";
-            cboxProductoRegistro.Size = new Size(182, 33);
-            cboxProductoRegistro.TabIndex = 10;
-            // 
             // cboxMateriaRegistro
             // 
             cboxMateriaRegistro.FormattingEnabled = true;
-            cboxMateriaRegistro.Items.AddRange(new object[] { "Estambre", "Relleno" });
-            cboxMateriaRegistro.Location = new Point(34, 172);
+            cboxMateriaRegistro.Items.AddRange(new object[] { "Ingreso", "Egreso" });
+            cboxMateriaRegistro.Location = new Point(12, 433);
             cboxMateriaRegistro.Name = "cboxMateriaRegistro";
             cboxMateriaRegistro.Size = new Size(182, 33);
             cboxMateriaRegistro.TabIndex = 11;
+            cboxMateriaRegistro.SelectedIndexChanged += cboxMateriaRegistro_SelectedIndexChanged;
             // 
             // lblUsuarios
             // 
@@ -336,14 +329,58 @@
             panelHost.Dock = DockStyle.Fill;
             panelHost.Location = new Point(94, 0);
             panelHost.Name = "panelHost";
-            panelHost.Size = new Size(1285, 658);
+            panelHost.Size = new Size(1285, 690);
             panelHost.TabIndex = 5;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { PRODUCTOS });
+            dataGridView1.Location = new Point(12, 91);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.Size = new Size(182, 225);
+            dataGridView1.TabIndex = 21;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(200, 91);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowHeadersWidth = 62;
+            dataGridView2.Size = new Size(182, 225);
+            dataGridView2.TabIndex = 22;
+            // 
+            // dataGridView3
+            // 
+            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView3.Location = new Point(428, 91);
+            dataGridView3.Name = "dataGridView3";
+            dataGridView3.RowHeadersWidth = 62;
+            dataGridView3.Size = new Size(314, 169);
+            dataGridView3.TabIndex = 23;
+            // 
+            // dataGridView4
+            // 
+            dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView4.Location = new Point(428, 332);
+            dataGridView4.Name = "dataGridView4";
+            dataGridView4.RowHeadersWidth = 62;
+            dataGridView4.Size = new Size(314, 169);
+            dataGridView4.TabIndex = 24;
+            // 
+            // PRODUCTOS
+            // 
+            PRODUCTOS.HeaderText = "Productos";
+            PRODUCTOS.MinimumWidth = 8;
+            PRODUCTOS.Name = "PRODUCTOS";
+            PRODUCTOS.Width = 150;
             // 
             // frmRegistro
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1379, 658);
+            ClientSize = new Size(1379, 690);
             Controls.Add(panelHost);
             Controls.Add(toolStrip1);
             Name = "frmRegistro";
@@ -362,6 +399,10 @@
             splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)numCantidad).EndInit();
             panelHost.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -378,9 +419,7 @@
         private Label lblUsuarios;
         private Panel panelHost;
         private SplitContainer splitContainer1;
-        private Label label1;
         private Label label2;
-        private ComboBox cboxProductoRegistro;
         private ComboBox cboxMateriaRegistro;
         private Label label3;
         private Label label5;
@@ -395,5 +434,10 @@
         private NumericUpDown numCantidad;
         private Label label9;
         private Button btnRegistrar;
+        private DataGridView dataGridView2;
+        private DataGridView dataGridView1;
+        private DataGridView dataGridView4;
+        private DataGridView dataGridView3;
+        private DataGridViewTextBoxColumn PRODUCTOS;
     }
 }

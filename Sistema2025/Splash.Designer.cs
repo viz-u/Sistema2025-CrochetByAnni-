@@ -53,7 +53,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.logo;
             BackgroundImageLayout = ImageLayout.Center;
-            ClientSize = new Size(1068, 647);
+            ClientSize = new Size(734, 647);
             Controls.Add(progressSplash);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Splash";

@@ -66,6 +66,11 @@ namespace Sistema2025
             this.dateFechaRegistro.Value = DateTime.Now;
 
         }
+
+        private void cboxMateriaRegistro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
