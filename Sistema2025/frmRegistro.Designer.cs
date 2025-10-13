@@ -36,12 +36,25 @@
             toolStripButton5 = new ToolStripButton();
             plRegistro = new Panel();
             splitContainer1 = new SplitContainer();
+            label13 = new Label();
+            dataGridView5 = new DataGridView();
+            HISTORIAL = new DataGridViewTextBoxColumn();
             label8 = new Label();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
+            label12 = new Label();
+            label1 = new Label();
+            dataGridView4 = new DataGridView();
+            MOVIMIENTO = new DataGridViewTextBoxColumn();
+            dataGridView3 = new DataGridView();
+            CARRITOVENTA = new DataGridViewTextBoxColumn();
+            dataGridView2 = new DataGridView();
+            MATERIAPRIMA = new DataGridViewTextBoxColumn();
+            dataGridView1 = new DataGridView();
+            PRODUCTOS = new DataGridViewTextBoxColumn();
             btnRegistrar = new Button();
             label11 = new Label();
             cboxAccionRegistro = new ComboBox();
@@ -53,23 +66,19 @@
             cboxMateriaRegistro = new ComboBox();
             lblUsuarios = new Label();
             panelHost = new Panel();
-            dataGridView1 = new DataGridView();
-            dataGridView2 = new DataGridView();
-            dataGridView3 = new DataGridView();
-            dataGridView4 = new DataGridView();
-            PRODUCTOS = new DataGridViewTextBoxColumn();
             toolStrip1.SuspendLayout();
             plRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numCantidad).BeginInit();
             panelHost.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView4).BeginInit();
             SuspendLayout();
             // 
             // toolStrip1
@@ -150,6 +159,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            splitContainer1.Panel1.Controls.Add(label13);
+            splitContainer1.Panel1.Controls.Add(dataGridView5);
             splitContainer1.Panel1.Controls.Add(label8);
             splitContainer1.Panel1.Controls.Add(label7);
             splitContainer1.Panel1.Controls.Add(label6);
@@ -160,6 +171,8 @@
             // 
             // splitContainer1.Panel2
             // 
+            splitContainer1.Panel2.Controls.Add(label12);
+            splitContainer1.Panel2.Controls.Add(label1);
             splitContainer1.Panel2.Controls.Add(dataGridView4);
             splitContainer1.Panel2.Controls.Add(dataGridView3);
             splitContainer1.Panel2.Controls.Add(dataGridView2);
@@ -177,10 +190,37 @@
             splitContainer1.SplitterDistance = 382;
             splitContainer1.TabIndex = 14;
             // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Lucida Sans", 15F, FontStyle.Bold);
+            label13.Location = new Point(52, 31);
+            label13.Name = "label13";
+            label13.Size = new Size(148, 34);
+            label13.TabIndex = 26;
+            label13.Text = "Historial";
+            // 
+            // dataGridView5
+            // 
+            dataGridView5.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView5.Columns.AddRange(new DataGridViewColumn[] { HISTORIAL });
+            dataGridView5.Location = new Point(52, 79);
+            dataGridView5.Name = "dataGridView5";
+            dataGridView5.RowHeadersWidth = 62;
+            dataGridView5.Size = new Size(276, 278);
+            dataGridView5.TabIndex = 18;
+            // 
+            // HISTORIAL
+            // 
+            HISTORIAL.HeaderText = "Historial de Registros";
+            HISTORIAL.MinimumWidth = 8;
+            HISTORIAL.Name = "HISTORIAL";
+            HISTORIAL.Width = 215;
+            // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(124, 291);
+            label8.Location = new Point(138, 441);
             label8.Name = "label8";
             label8.Size = new Size(66, 25);
             label8.TabIndex = 17;
@@ -189,7 +229,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(124, 235);
+            label7.Location = new Point(138, 405);
             label7.Name = "label7";
             label7.Size = new Size(66, 25);
             label7.TabIndex = 16;
@@ -198,7 +238,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(93, 70);
+            label6.Location = new Point(138, 373);
             label6.Name = "label6";
             label6.Size = new Size(66, 25);
             label6.TabIndex = 15;
@@ -207,7 +247,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(44, 291);
+            label5.Location = new Point(52, 441);
             label5.Name = "label5";
             label5.Size = new Size(74, 25);
             label5.TabIndex = 14;
@@ -216,7 +256,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(38, 235);
+            label4.Location = new Point(52, 405);
             label4.Name = "label4";
             label4.Size = new Size(80, 25);
             label4.TabIndex = 13;
@@ -225,12 +265,101 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(93, 31);
+            label3.Location = new Point(52, 371);
             label3.Name = "label3";
-            label3.Size = new Size(61, 25);
+            label3.Size = new Size(49, 25);
             label3.TabIndex = 0;
-            label3.Text = "TOTAL";
+            label3.Text = "Total";
             label3.Click += label3_Click;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Lucida Sans", 15F, FontStyle.Bold);
+            label12.Location = new Point(428, 283);
+            label12.Name = "label12";
+            label12.Size = new Size(198, 34);
+            label12.TabIndex = 26;
+            label12.Text = "Movimiento";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Lucida Sans", 15F, FontStyle.Bold);
+            label1.Location = new Point(428, 31);
+            label1.Name = "label1";
+            label1.Size = new Size(103, 34);
+            label1.TabIndex = 25;
+            label1.Text = "Venta";
+            // 
+            // dataGridView4
+            // 
+            dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView4.Columns.AddRange(new DataGridViewColumn[] { MOVIMIENTO });
+            dataGridView4.Location = new Point(428, 332);
+            dataGridView4.Name = "dataGridView4";
+            dataGridView4.RowHeadersWidth = 62;
+            dataGridView4.Size = new Size(314, 169);
+            dataGridView4.TabIndex = 24;
+            // 
+            // MOVIMIENTO
+            // 
+            MOVIMIENTO.HeaderText = "Movimiento";
+            MOVIMIENTO.MinimumWidth = 8;
+            MOVIMIENTO.Name = "MOVIMIENTO";
+            MOVIMIENTO.Width = 250;
+            // 
+            // dataGridView3
+            // 
+            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { CARRITOVENTA });
+            dataGridView3.Location = new Point(428, 91);
+            dataGridView3.Name = "dataGridView3";
+            dataGridView3.RowHeadersWidth = 62;
+            dataGridView3.Size = new Size(314, 169);
+            dataGridView3.TabIndex = 23;
+            dataGridView3.CellContentClick += dataGridView3_CellContentClick;
+            // 
+            // CARRITOVENTA
+            // 
+            CARRITOVENTA.HeaderText = "Venta";
+            CARRITOVENTA.MinimumWidth = 8;
+            CARRITOVENTA.Name = "CARRITOVENTA";
+            CARRITOVENTA.Width = 250;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { MATERIAPRIMA });
+            dataGridView2.Location = new Point(200, 91);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowHeadersWidth = 62;
+            dataGridView2.Size = new Size(182, 225);
+            dataGridView2.TabIndex = 22;
+            // 
+            // MATERIAPRIMA
+            // 
+            MATERIAPRIMA.HeaderText = "Materias Primas";
+            MATERIAPRIMA.MinimumWidth = 8;
+            MATERIAPRIMA.Name = "MATERIAPRIMA";
+            MATERIAPRIMA.Width = 150;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { PRODUCTOS });
+            dataGridView1.Location = new Point(12, 91);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.Size = new Size(182, 225);
+            dataGridView1.TabIndex = 21;
+            // 
+            // PRODUCTOS
+            // 
+            PRODUCTOS.HeaderText = "Productos";
+            PRODUCTOS.MinimumWidth = 8;
+            PRODUCTOS.Name = "PRODUCTOS";
+            PRODUCTOS.Width = 150;
             // 
             // btnRegistrar
             // 
@@ -266,7 +395,6 @@
             dateFechaRegistro.Name = "dateFechaRegistro";
             dateFechaRegistro.Size = new Size(180, 31);
             dateFechaRegistro.TabIndex = 17;
-           
             // 
             // label10
             // 
@@ -331,50 +459,7 @@
             panelHost.Name = "panelHost";
             panelHost.Size = new Size(1285, 690);
             panelHost.TabIndex = 5;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { PRODUCTOS });
-            dataGridView1.Location = new Point(12, 91);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(182, 225);
-            dataGridView1.TabIndex = 21;
-            // 
-            // dataGridView2
-            // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(200, 91);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 62;
-            dataGridView2.Size = new Size(182, 225);
-            dataGridView2.TabIndex = 22;
-            // 
-            // dataGridView3
-            // 
-            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Location = new Point(428, 91);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.RowHeadersWidth = 62;
-            dataGridView3.Size = new Size(314, 169);
-            dataGridView3.TabIndex = 23;
-            // 
-            // dataGridView4
-            // 
-            dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView4.Location = new Point(428, 332);
-            dataGridView4.Name = "dataGridView4";
-            dataGridView4.RowHeadersWidth = 62;
-            dataGridView4.Size = new Size(314, 169);
-            dataGridView4.TabIndex = 24;
-            // 
-            // PRODUCTOS
-            // 
-            PRODUCTOS.HeaderText = "Productos";
-            PRODUCTOS.MinimumWidth = 8;
-            PRODUCTOS.Name = "PRODUCTOS";
-            PRODUCTOS.Width = 150;
+            panelHost.Paint += panelHost_Paint;
             // 
             // frmRegistro
             // 
@@ -397,12 +482,13 @@
             splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)numCantidad).EndInit();
             panelHost.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -439,5 +525,13 @@
         private DataGridView dataGridView4;
         private DataGridView dataGridView3;
         private DataGridViewTextBoxColumn PRODUCTOS;
+        private DataGridViewTextBoxColumn MATERIAPRIMA;
+        private Label label12;
+        private Label label1;
+        private DataGridViewTextBoxColumn MOVIMIENTO;
+        private DataGridViewTextBoxColumn CARRITOVENTA;
+        private Label label13;
+        private DataGridView dataGridView5;
+        private DataGridViewTextBoxColumn HISTORIAL;
     }
 }

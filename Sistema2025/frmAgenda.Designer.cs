@@ -1,4 +1,4 @@
-﻿namespace Sistema2025
+﻿    namespace Sistema2025
 {
     partial class frmAgenda
     {
@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             toolStrip1 = new ToolStrip();
-            toolStripButton1 = new ToolStripButton();
-            toolStripButton2 = new ToolStripButton();
-            toolStripButton3 = new ToolStripButton();
-            toolStripButton4 = new ToolStripButton();
-            toolStripButton5 = new ToolStripButton();
+            tsbtnNuevo = new ToolStripButton();
+            tsbtnGuardar = new ToolStripButton();
+            tsbtnActualizar = new ToolStripButton();
+            tsbtnEliminar = new ToolStripButton();
+            tsbtnCerrar = new ToolStripButton();
             plAgenda = new Panel();
             label3 = new Label();
             txtDesc = new TextBox();
@@ -41,12 +41,13 @@
             txtTitulo = new TextBox();
             label1 = new Label();
             dateFecha = new DateTimePicker();
-            Recordatorios = new ListBox();
             lblUsuarios = new Label();
             panelHost = new Panel();
+            dataGridView1 = new DataGridView();
             toolStrip1.SuspendLayout();
             plAgenda.SuspendLayout();
             panelHost.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // toolStrip1
@@ -54,7 +55,7 @@
             toolStrip1.BackColor = Color.FromArgb(218, 201, 228);
             toolStrip1.Dock = DockStyle.Left;
             toolStrip1.ImageScalingSize = new Size(24, 24);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripButton2, toolStripButton3, toolStripButton4, toolStripButton5 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { tsbtnNuevo, tsbtnGuardar, tsbtnActualizar, tsbtnEliminar, tsbtnCerrar });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.RenderMode = ToolStripRenderMode.Professional;
@@ -63,67 +64,70 @@
             toolStrip1.Text = "toolStrip1";
             toolStrip1.ItemClicked += toolStrip1_ItemClicked;
             // 
-            // toolStripButton1
+            // tsbtnNuevo
             // 
-            toolStripButton1.DoubleClickEnabled = true;
-            toolStripButton1.Image = Properties.Resources.add_document;
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(89, 53);
-            toolStripButton1.Text = "Nuevo";
-            toolStripButton1.TextImageRelation = TextImageRelation.ImageAboveText;
-            toolStripButton1.Click += toolStripButton1_Click;
+            tsbtnNuevo.DoubleClickEnabled = true;
+            tsbtnNuevo.Image = Properties.Resources.add_document;
+            tsbtnNuevo.ImageTransparentColor = Color.Magenta;
+            tsbtnNuevo.Name = "tsbtnNuevo";
+            tsbtnNuevo.Size = new Size(89, 53);
+            tsbtnNuevo.Text = "Nuevo";
+            tsbtnNuevo.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbtnNuevo.Click += toolStripButton1_Click;
             // 
-            // toolStripButton2
+            // tsbtnGuardar
             // 
-            toolStripButton2.Image = Properties.Resources.save;
-            toolStripButton2.ImageTransparentColor = Color.Magenta;
-            toolStripButton2.Name = "toolStripButton2";
-            toolStripButton2.Size = new Size(89, 53);
-            toolStripButton2.Text = "Guardar";
-            toolStripButton2.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbtnGuardar.Image = Properties.Resources.save;
+            tsbtnGuardar.ImageTransparentColor = Color.Magenta;
+            tsbtnGuardar.Name = "tsbtnGuardar";
+            tsbtnGuardar.Size = new Size(89, 53);
+            tsbtnGuardar.Text = "Guardar";
+            tsbtnGuardar.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbtnGuardar.Click += tsbtnGuardar_Click;
             // 
-            // toolStripButton3
+            // tsbtnActualizar
             // 
-            toolStripButton3.Image = Properties.Resources.file_update;
-            toolStripButton3.ImageTransparentColor = Color.Magenta;
-            toolStripButton3.Name = "toolStripButton3";
-            toolStripButton3.Size = new Size(89, 53);
-            toolStripButton3.Text = "Actualizar";
-            toolStripButton3.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbtnActualizar.Image = Properties.Resources.file_update;
+            tsbtnActualizar.ImageTransparentColor = Color.Magenta;
+            tsbtnActualizar.Name = "tsbtnActualizar";
+            tsbtnActualizar.Size = new Size(89, 53);
+            tsbtnActualizar.Text = "Actualizar";
+            tsbtnActualizar.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbtnActualizar.Click += tsbtnActualizar_Click;
             // 
-            // toolStripButton4
+            // tsbtnEliminar
             // 
-            toolStripButton4.Image = Properties.Resources.trash;
-            toolStripButton4.ImageTransparentColor = Color.Magenta;
-            toolStripButton4.Name = "toolStripButton4";
-            toolStripButton4.Size = new Size(89, 53);
-            toolStripButton4.Text = "Eliminar";
-            toolStripButton4.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbtnEliminar.Image = Properties.Resources.trash;
+            tsbtnEliminar.ImageTransparentColor = Color.Magenta;
+            tsbtnEliminar.Name = "tsbtnEliminar";
+            tsbtnEliminar.Size = new Size(89, 53);
+            tsbtnEliminar.Text = "Eliminar";
+            tsbtnEliminar.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbtnEliminar.Click += tsbtnEliminar_Click;
             // 
-            // toolStripButton5
+            // tsbtnCerrar
             // 
-            toolStripButton5.Image = Properties.Resources.logout;
-            toolStripButton5.ImageTransparentColor = Color.Magenta;
-            toolStripButton5.Name = "toolStripButton5";
-            toolStripButton5.Size = new Size(89, 53);
-            toolStripButton5.Text = "Cerrar";
-            toolStripButton5.TextImageRelation = TextImageRelation.ImageAboveText;
-            toolStripButton5.Click += toolStripButton5_Click;
+            tsbtnCerrar.Image = Properties.Resources.logout;
+            tsbtnCerrar.ImageTransparentColor = Color.Magenta;
+            tsbtnCerrar.Name = "tsbtnCerrar";
+            tsbtnCerrar.Size = new Size(89, 53);
+            tsbtnCerrar.Text = "Cerrar";
+            tsbtnCerrar.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbtnCerrar.Click += toolStripButton5_Click;
             // 
             // plAgenda
             // 
+            plAgenda.Controls.Add(dataGridView1);
             plAgenda.Controls.Add(label3);
             plAgenda.Controls.Add(txtDesc);
             plAgenda.Controls.Add(label2);
             plAgenda.Controls.Add(txtTitulo);
             plAgenda.Controls.Add(label1);
             plAgenda.Controls.Add(dateFecha);
-            plAgenda.Controls.Add(Recordatorios);
             plAgenda.Controls.Add(lblUsuarios);
             plAgenda.Location = new Point(38, 24);
             plAgenda.Name = "plAgenda";
-            plAgenda.Size = new Size(634, 383);
+            plAgenda.Size = new Size(1072, 546);
             plAgenda.TabIndex = 2;
             // 
             // label3
@@ -176,16 +180,6 @@
             dateFecha.Size = new Size(242, 31);
             dateFecha.TabIndex = 10;
             // 
-            // Recordatorios
-            // 
-            Recordatorios.FormattingEnabled = true;
-            Recordatorios.ItemHeight = 25;
-            Recordatorios.Location = new Point(294, 29);
-            Recordatorios.Name = "Recordatorios";
-            Recordatorios.Size = new Size(323, 329);
-            Recordatorios.TabIndex = 9;
-            Recordatorios.SelectedIndexChanged += Recordatorios_SelectedIndexChanged;
-            // 
             // lblUsuarios
             // 
             lblUsuarios.AutoSize = true;
@@ -206,6 +200,15 @@
             panelHost.Size = new Size(1146, 582);
             panelHost.TabIndex = 3;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(409, 97);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.Size = new Size(645, 431);
+            dataGridView1.TabIndex = 16;
+            // 
             // frmAgenda
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -224,6 +227,7 @@
             plAgenda.ResumeLayout(false);
             plAgenda.PerformLayout();
             panelHost.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -231,14 +235,13 @@
         #endregion
 
         private ToolStrip toolStrip1;
-        private ToolStripButton toolStripButton1;
-        private ToolStripButton toolStripButton2;
-        private ToolStripButton toolStripButton3;
-        private ToolStripButton toolStripButton4;
-        private ToolStripButton toolStripButton5;
+        private ToolStripButton tsbtnNuevo;
+        private ToolStripButton tsbtnGuardar;
+        private ToolStripButton tsbtnActualizar;
+        private ToolStripButton tsbtnEliminar;
+        private ToolStripButton tsbtnCerrar;
         private Panel plAgenda;
         private Label lblUsuarios;
-        private ListBox Recordatorios;
         private DateTimePicker dateFecha;
         private Label label1;
         private Label label3;
@@ -246,5 +249,6 @@
         private Label label2;
         private TextBox txtTitulo;
         private Panel panelHost;
+        private DataGridView dataGridView1;
     }
 }

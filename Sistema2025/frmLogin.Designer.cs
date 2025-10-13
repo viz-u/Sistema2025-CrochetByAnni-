@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            btnAcceder = new Button();
             label1 = new Label();
             label2 = new Label();
             textBox1 = new TextBox();
@@ -39,15 +39,15 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // btnAcceder
             // 
-            button1.Location = new Point(69, 320);
-            button1.Name = "button1";
-            button1.Size = new Size(90, 34);
-            button1.TabIndex = 0;
-            button1.Text = "Acceder";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnAcceder.Location = new Point(69, 320);
+            btnAcceder.Name = "btnAcceder";
+            btnAcceder.Size = new Size(90, 34);
+            btnAcceder.TabIndex = 0;
+            btnAcceder.Text = "Acceder";
+            btnAcceder.UseVisualStyleBackColor = true;
+            btnAcceder.Click += Acceder;
             // 
             // label1
             // 
@@ -58,7 +58,7 @@
             label1.Size = new Size(72, 25);
             label1.TabIndex = 1;
             label1.Text = "Usuario";
-            label1.Click += label1_Click;
+            
             // 
             // label2
             // 
@@ -92,7 +92,7 @@
             // 
             panel1.BackColor = Color.White;
             panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnAcceder);
             panel1.Controls.Add(txtPassword);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(textBox1);
@@ -134,7 +134,7 @@
 
         #endregion
 
-        private Button button1;
+        private Button btnAcceder;
         private Label label1;
         private Label label2;
         private TextBox textBox1;

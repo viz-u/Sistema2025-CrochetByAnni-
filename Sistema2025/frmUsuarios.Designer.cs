@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             toolStrip1 = new ToolStrip();
-            toolStripButton1 = new ToolStripButton();
-            toolStripButton2 = new ToolStripButton();
-            toolStripButton3 = new ToolStripButton();
-            toolStripButton4 = new ToolStripButton();
-            toolStripButton5 = new ToolStripButton();
+            tsbtnNuevo = new ToolStripButton();
+            tsbtnGuardar = new ToolStripButton();
+            tsbtnActualizar = new ToolStripButton();
+            tsbtnEliminar = new ToolStripButton();
+            tsbtnSalir = new ToolStripButton();
             plUsuarios = new Panel();
-            textBox1 = new TextBox();
+            dgvUsuarios = new DataGridView();
+            txtNombre = new TextBox();
             label4 = new Label();
             cboxTipoUsuario = new ComboBox();
             label3 = new Label();
@@ -45,11 +46,10 @@
             label1 = new Label();
             lblUsuarios = new Label();
             panelHost = new Panel();
-            dataGridView1 = new DataGridView();
             toolStrip1.SuspendLayout();
             plUsuarios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvUsuarios).BeginInit();
             panelHost.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // toolStrip1
@@ -57,7 +57,7 @@
             toolStrip1.BackColor = Color.FromArgb(218, 201, 228);
             toolStrip1.Dock = DockStyle.Left;
             toolStrip1.ImageScalingSize = new Size(24, 24);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripButton2, toolStripButton3, toolStripButton4, toolStripButton5 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { tsbtnNuevo, tsbtnGuardar, tsbtnActualizar, tsbtnEliminar, tsbtnSalir });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.RenderMode = ToolStripRenderMode.Professional;
@@ -65,57 +65,60 @@
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // tsbtnNuevo
             // 
-            toolStripButton1.Image = Properties.Resources.add_document;
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(89, 53);
-            toolStripButton1.Text = "Nuevo";
-            toolStripButton1.TextImageRelation = TextImageRelation.ImageAboveText;
-            toolStripButton1.Click += toolStripButton1_Click;
+            tsbtnNuevo.Image = Properties.Resources.add_document;
+            tsbtnNuevo.ImageTransparentColor = Color.Magenta;
+            tsbtnNuevo.Name = "tsbtnNuevo";
+            tsbtnNuevo.Size = new Size(89, 53);
+            tsbtnNuevo.Text = "Nuevo";
+            tsbtnNuevo.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbtnNuevo.Click += tsbtnNuevo_Click;
             // 
-            // toolStripButton2
+            // tsbtnGuardar
             // 
-            toolStripButton2.Image = Properties.Resources.save;
-            toolStripButton2.ImageTransparentColor = Color.Magenta;
-            toolStripButton2.Name = "toolStripButton2";
-            toolStripButton2.Size = new Size(89, 53);
-            toolStripButton2.Text = "Guardar";
-            toolStripButton2.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbtnGuardar.Image = Properties.Resources.save;
+            tsbtnGuardar.ImageTransparentColor = Color.Magenta;
+            tsbtnGuardar.Name = "tsbtnGuardar";
+            tsbtnGuardar.Size = new Size(89, 53);
+            tsbtnGuardar.Text = "Guardar";
+            tsbtnGuardar.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbtnGuardar.Click += tsbtnGuardar_Click;
             // 
-            // toolStripButton3
+            // tsbtnActualizar
             // 
-            toolStripButton3.Image = Properties.Resources.file_update;
-            toolStripButton3.ImageTransparentColor = Color.Magenta;
-            toolStripButton3.Name = "toolStripButton3";
-            toolStripButton3.Size = new Size(89, 53);
-            toolStripButton3.Text = "Actualizar";
-            toolStripButton3.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbtnActualizar.Image = Properties.Resources.file_update;
+            tsbtnActualizar.ImageTransparentColor = Color.Magenta;
+            tsbtnActualizar.Name = "tsbtnActualizar";
+            tsbtnActualizar.Size = new Size(89, 53);
+            tsbtnActualizar.Text = "Actualizar";
+            tsbtnActualizar.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbtnActualizar.Click += tsbtnActualizar_Click;
             // 
-            // toolStripButton4
+            // tsbtnEliminar
             // 
-            toolStripButton4.Image = Properties.Resources.trash;
-            toolStripButton4.ImageTransparentColor = Color.Magenta;
-            toolStripButton4.Name = "toolStripButton4";
-            toolStripButton4.Size = new Size(89, 53);
-            toolStripButton4.Text = "Eliminar";
-            toolStripButton4.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbtnEliminar.Image = Properties.Resources.trash;
+            tsbtnEliminar.ImageTransparentColor = Color.Magenta;
+            tsbtnEliminar.Name = "tsbtnEliminar";
+            tsbtnEliminar.Size = new Size(89, 53);
+            tsbtnEliminar.Text = "Eliminar";
+            tsbtnEliminar.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbtnEliminar.Click += tsbtnEliminar_Click;
             // 
-            // toolStripButton5
+            // tsbtnSalir
             // 
-            toolStripButton5.Image = Properties.Resources.logout;
-            toolStripButton5.ImageTransparentColor = Color.Magenta;
-            toolStripButton5.Name = "toolStripButton5";
-            toolStripButton5.Size = new Size(89, 53);
-            toolStripButton5.Text = "Cerrar";
-            toolStripButton5.TextImageRelation = TextImageRelation.ImageAboveText;
-            toolStripButton5.Click += toolStripButton5_Click;
+            tsbtnSalir.Image = Properties.Resources.logout;
+            tsbtnSalir.ImageTransparentColor = Color.Magenta;
+            tsbtnSalir.Name = "tsbtnSalir";
+            tsbtnSalir.Size = new Size(89, 53);
+            tsbtnSalir.Text = "Cerrar";
+            tsbtnSalir.TextImageRelation = TextImageRelation.ImageAboveText;
+            tsbtnSalir.Click += tsbtnCerrar_Click;
             // 
             // plUsuarios
             // 
-            plUsuarios.Controls.Add(dataGridView1);
-            plUsuarios.Controls.Add(textBox1);
+            plUsuarios.Controls.Add(dgvUsuarios);
+            plUsuarios.Controls.Add(txtNombre);
             plUsuarios.Controls.Add(label4);
             plUsuarios.Controls.Add(cboxTipoUsuario);
             plUsuarios.Controls.Add(label3);
@@ -126,17 +129,25 @@
             plUsuarios.Controls.Add(lblUsuarios);
             plUsuarios.Location = new Point(74, 41);
             plUsuarios.Name = "plUsuarios";
-            plUsuarios.Size = new Size(922, 583);
+            plUsuarios.Size = new Size(1040, 583);
             plUsuarios.TabIndex = 1;
-            plUsuarios.Paint += panel1_Paint;
             // 
-            // textBox1
+            // dgvUsuarios
             // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(29, 146);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(261, 31);
-            textBox1.TabIndex = 15;
+            dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvUsuarios.Location = new Point(470, 109);
+            dgvUsuarios.Name = "dgvUsuarios";
+            dgvUsuarios.RowHeadersWidth = 62;
+            dgvUsuarios.Size = new Size(547, 439);
+            dgvUsuarios.TabIndex = 16;
+            // 
+            // txtNombre
+            // 
+            txtNombre.BorderStyle = BorderStyle.FixedSingle;
+            txtNombre.Location = new Point(29, 146);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(261, 31);
+            txtNombre.TabIndex = 15;
             // 
             // label4
             // 
@@ -170,6 +181,7 @@
             txtPasswordForm.BorderStyle = BorderStyle.FixedSingle;
             txtPasswordForm.Location = new Point(30, 310);
             txtPasswordForm.Name = "txtPasswordForm";
+            txtPasswordForm.PasswordChar = '*';
             txtPasswordForm.Size = new Size(261, 31);
             txtPasswordForm.TabIndex = 11;
             // 
@@ -198,7 +210,6 @@
             label1.Size = new Size(76, 25);
             label1.TabIndex = 8;
             label1.Text = "Usuario:";
-            label1.Click += label1_Click;
             // 
             // lblUsuarios
             // 
@@ -220,15 +231,6 @@
             panelHost.Size = new Size(1126, 636);
             panelHost.TabIndex = 2;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(470, 109);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(360, 327);
-            dataGridView1.TabIndex = 16;
-            // 
             // frmUsuarios
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -245,8 +247,8 @@
             toolStrip1.PerformLayout();
             plUsuarios.ResumeLayout(false);
             plUsuarios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvUsuarios).EndInit();
             panelHost.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -254,11 +256,11 @@
         #endregion
 
         private ToolStrip toolStrip1;
-        private ToolStripButton toolStripButton1;
-        private ToolStripButton toolStripButton2;
-        private ToolStripButton toolStripButton3;
-        private ToolStripButton toolStripButton4;
-        private ToolStripButton toolStripButton5;
+        private ToolStripButton tsbtnNuevo;
+        private ToolStripButton tsbtnGuardar;
+        private ToolStripButton tsbtnActualizar;
+        private ToolStripButton tsbtnEliminar;
+        private ToolStripButton tsbtnSalir;
         private Panel plUsuarios;
         private ComboBox cboxTipoUsuario;
         private Label label3;
@@ -269,8 +271,8 @@
         private Label lblUsuarios;
         private Panel panelHost;
 
-        private TextBox textBox1;
+        private TextBox txtNombre;
         private Label label4;
-        private DataGridView dataGridView1;
+        private DataGridView dgvUsuarios;
     }
 }

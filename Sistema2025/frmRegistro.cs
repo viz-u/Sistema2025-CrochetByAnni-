@@ -61,13 +61,23 @@ namespace Sistema2025
         {
             this.cboxAccionRegistro.SelectedIndex = -1;
             this.cboxMateriaRegistro.SelectedIndex = -1;
-            this.cboxProductoRegistro.SelectedIndex = -1;
+            
             this.numCantidad.Value = 0;
             this.dateFechaRegistro.Value = DateTime.Now;
 
         }
 
         private void cboxMateriaRegistro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panelHost_Paint(object sender, PaintEventArgs e)
         {
 
         }

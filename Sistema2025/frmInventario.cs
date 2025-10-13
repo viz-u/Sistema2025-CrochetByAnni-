@@ -45,8 +45,7 @@ namespace Sistema2025
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             this.txtNombreInv.Text = "";
-            this.txtPrecioInv.Text = "";
-            this.cboxTipoInv.SelectedIndex = -1;
+           
         }
 
 
@@ -91,6 +90,11 @@ namespace Sistema2025
         }
 
         private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelHost_Paint(object sender, PaintEventArgs e)
         {
 
         }

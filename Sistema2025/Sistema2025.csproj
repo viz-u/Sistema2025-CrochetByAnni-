@@ -9,6 +9,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ConexionBD">
+      <HintPath>bin\Debug\net8.0-windows\ConexionBD.dll</HintPath>
+    </Reference>
+    <Reference Include="DAO">
+      <HintPath>bin\Debug\net8.0-windows\DAO.dll</HintPath>
+    </Reference>
+    <Reference Include="DominioCrochet">
+      <HintPath>bin\Debug\net8.0-windows\DominioCrochet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
