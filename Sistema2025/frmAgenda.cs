@@ -1,4 +1,4 @@
-﻿using DAO;
+﻿using DAOmysql;
 using DominioCrochet;
 using Sistema2025.Utils;
 using System;
@@ -231,5 +231,10 @@ namespace Sistema2025
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e) { /* sin uso */ }
+
+        private void panelHost_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -35,6 +35,7 @@
             tsbtnEliminar = new ToolStripButton();
             tsbtnCerrar = new ToolStripButton();
             plAgenda = new Panel();
+            dataGridView1 = new DataGridView();
             label3 = new Label();
             txtDesc = new TextBox();
             label2 = new Label();
@@ -43,11 +44,10 @@
             dateFecha = new DateTimePicker();
             lblUsuarios = new Label();
             panelHost = new Panel();
-            dataGridView1 = new DataGridView();
             toolStrip1.SuspendLayout();
             plAgenda.SuspendLayout();
-            panelHost.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panelHost.SuspendLayout();
             SuspendLayout();
             // 
             // toolStrip1
@@ -130,6 +130,15 @@
             plAgenda.Size = new Size(1072, 546);
             plAgenda.TabIndex = 2;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(409, 97);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.Size = new Size(645, 431);
+            dataGridView1.TabIndex = 16;
+            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -199,15 +208,7 @@
             panelHost.Name = "panelHost";
             panelHost.Size = new Size(1146, 582);
             panelHost.TabIndex = 3;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(409, 97);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(645, 431);
-            dataGridView1.TabIndex = 16;
+            panelHost.Paint += panelHost_Paint;
             // 
             // frmAgenda
             // 
@@ -226,8 +227,8 @@
             toolStrip1.PerformLayout();
             plAgenda.ResumeLayout(false);
             plAgenda.PerformLayout();
-            panelHost.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panelHost.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }

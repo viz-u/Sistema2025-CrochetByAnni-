@@ -104,7 +104,7 @@
             toolStripButton1.Size = new Size(89, 53);
             toolStripButton1.Text = "Nuevo";
             toolStripButton1.TextImageRelation = TextImageRelation.ImageAboveText;
-            toolStripButton1.Click += toolStripButton1_Click;
+            
             // 
             // toolStripButton2
             // 
@@ -141,7 +141,6 @@
             toolStripButton5.Size = new Size(89, 53);
             toolStripButton5.Text = "Cerrar";
             toolStripButton5.TextImageRelation = TextImageRelation.ImageAboveText;
-            toolStripButton5.Click += toolStripButton5_Click;
             // 
             // plInventario
             // 
@@ -151,7 +150,6 @@
             plInventario.Name = "plInventario";
             plInventario.Size = new Size(1179, 718);
             plInventario.TabIndex = 3;
-            plInventario.Paint += panel1_Paint;
             // 
             // splitContainer1
             // 
@@ -191,7 +189,6 @@
             splitContainer1.Panel2.Controls.Add(textBox2);
             splitContainer1.Panel2.Controls.Add(label6);
             splitContainer1.Panel2.Controls.Add(label5);
-            splitContainer1.Panel2.Paint += splitContainer1_Panel2_Paint;
             splitContainer1.Size = new Size(1113, 595);
             splitContainer1.SplitterDistance = 534;
             splitContainer1.SplitterWidth = 10;
@@ -250,7 +247,6 @@
             label2.Size = new Size(60, 25);
             label2.TabIndex = 16;
             label2.Text = "Precio";
-            label2.Click += label2_Click;
             // 
             // lblStock
             // 
@@ -269,7 +265,6 @@
             textBox1.PlaceholderText = "Escriba aqui...";
             textBox1.Size = new Size(208, 31);
             textBox1.TabIndex = 21;
-            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // numericUpDown1
             // 
@@ -304,7 +299,6 @@
             label12.Size = new Size(144, 25);
             label12.TabIndex = 41;
             label12.Text = "Minimo Reorden";
-            label12.Click += label12_Click;
             // 
             // label11
             // 
@@ -367,7 +361,6 @@
             label1.Size = new Size(306, 45);
             label1.TabIndex = 33;
             label1.Text = "Materia Prima";
-            label1.Click += label1_Click_1;
             // 
             // textBox4
             // 
@@ -440,7 +433,6 @@
             label6.Size = new Size(59, 25);
             label6.TabIndex = 26;
             label6.Text = "Costo";
-            label6.Click += label6_Click;
             // 
             // label5
             // 
@@ -471,7 +463,6 @@
             panelHost.Name = "panelHost";
             panelHost.Size = new Size(1248, 779);
             panelHost.TabIndex = 4;
-            panelHost.Paint += panelHost_Paint;
             // 
             // frmInventario
             // 

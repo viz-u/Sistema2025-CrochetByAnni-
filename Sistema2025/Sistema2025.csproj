@@ -10,14 +10,15 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.2" />
+    <PackageReference Include="MySql.Data" Version="9.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="ConexionBD">
-      <HintPath>bin\Debug\net8.0-windows\ConexionBD.dll</HintPath>
+    <Reference Include="BDConexión">
+      <HintPath>bin\Debug\net8.0-windows\BDConexión.dll</HintPath>
     </Reference>
-    <Reference Include="DAO">
-      <HintPath>bin\Debug\net8.0-windows\DAO.dll</HintPath>
+    <Reference Include="DAOmysql">
+      <HintPath>bin\Debug\net8.0-windows\DAOmysql.dll</HintPath>
     </Reference>
     <Reference Include="DominioCrochet">
       <HintPath>bin\Debug\net8.0-windows\DominioCrochet.dll</HintPath>

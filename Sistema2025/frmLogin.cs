@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using DAO;
+using DAOmysql;
 using DominioCrochet;
 using Sistema2025.Utils;   // <-- usa tu clase de sesión real
 
